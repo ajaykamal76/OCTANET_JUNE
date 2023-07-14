@@ -1,41 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OKER</title>
-  <link rel="stylesheet" href="style.css">  
+    <title> TodoList</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-  <header class="header">
-    <h1>WELCOME TO OKER PLATFORM "Enjoy learning...."</h1>
-  </header>
-  <div>
-    <div class="main">
-      <ul>
-        <li><a href="a">HOME</a></li> 
-        <li><a href="a">Live class</a></li>
-        <li><a href="a">Meetings</a></li>
-        <li><a href="a">Live Chat</a></li>
-        <li><a href="a">Doubts</a></li>
-        <li><a href="a">Subscription</a></li>
-        <li><a href="a">References</a></li> 
-        <li><a href="a">Feedback</a>
-          </li>
-          </ul>
-    </div>
+    <header class="header">
+        <h1>ADD YOUR MEMORY HERE!!!</h1>
+      </header>
+    <div class="container">
+        <div id="newtask">
+            <input type="text" placeholder="Task to be done..">
+            <button id="push">Add</button>
+        </div>
 
-  
-  
-  <section class="hero-image"></section>
-  
-  <section class="content">
-    <h2>About Us</h2>
-    <p>At Oker, we believe that education is the key to unlocking human potential and creating a better future. We are an innovative online education platform dedicated to providing high-quality learning experiences that inspire and empower learners of all ages.
+        <div id="tasks"></div>
+    </div>
+    <!--Script-->
+    <script type="text/javascript">
+document.querySelector('#push').onclick = function(){
+    if(document.querySelector('#newtask input').value.length == 0){
+        alert("Please Enter a Task")
+    }
+    else{
+        document.querySelector('#tasks').innerHTML += `
+            <div class="task">
+                <span id="taskname">
+                    ${document.querySelector('#newtask input').value}
+                </span>
+                <button class="delete">
+                    <i class="far fa-trash-alt"></i>
+                </button>
+            </div>
+        `;
+
+        var current_tasks = document.querySelectorAll(".delete");
+        for(var i=0; i<current_tasks.length; i++){
+            current_tasks[i].onclick = function(){
+                this.parentNode.remove();
+            }
+        }
+
       
-                                                      
-               Get started with Oker today and let your learning adventure begin!.</p>
-    <a href="#" class="cta-button">Learn More</a>
-  </section>
+
+ 
+    }
+}
+    </script>   
 </body>
 </html>
