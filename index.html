@@ -1,54 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title> TodoList</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
-    <header class="header">
-        <h1>ADD YOUR MEMORY HERE!!!</h1>
-      </header>
-    <div class="container">
-        <div id="newtask">
-            <input type="text" placeholder="Task to be done..">
-            <button id="push">Add</button>
+<div class="header">
+    <nav>
+        <img src="images/logo.png" class="logo">
+        <div>
+            <button class="language-btn">English <img src="images/down-icon.png"></button>
+            <button>Sign in</button>
         </div>
-
-        <div id="tasks"></div>
+    </nav>
+    <div class="header-content">
+        <h1>Unlimited movies,TV shows and more..</h1>
+        <h3>Watch anywhere . cancel anytime.</h3>
+        <p>Ready to watch ? Enter your email to create or restart your membership </p>
+        <form class="email-signup">
+            <input type="email" placeholder="email address"required>
+        <button type="submit">Get started</button>
+        </form>
+        
+        
     </div>
-    <!--Script-->
-    <script type="text/javascript">
-document.querySelector('#push').onclick = function(){
-    if(document.querySelector('#newtask input').value.length == 0){
-        alert("Please Enter a Task")
-    }
-    else{
-        document.querySelector('#tasks').innerHTML += `
-            <div class="task">
-                <span id="taskname">
-                    ${document.querySelector('#newtask input').value}
-                </span>
-                <button class="delete">
-                    <i class="far fa-trash-alt"></i>
-                </button>
-            </div>
-        `;
+</div>
+<div class="features">
+    <div class="row">
+        <div class="txt-col">
+            <h2>Enjoy on your TV</h2>
+            <P>Watch on Smart TVs,Playstation,xbox,Chromecast,Apple TV,Blu-ray players and more. </P>
+        </div>
+        <div class="img-col">
+            <img src="images/feature-1.png" >
+        </div>
+    </div>
+    <div class="row">
+        <div class="img-col">
+            <img src="images/feature-2.png" >
+        </div>
+        <div class="txt-col">
+            <h2>Download your shows to watch offline</h2>
+            <P>Save your favourites easily and always have something to Watch </P>
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="txt-col">
+            <h2>Watch Everywhere.</h2>
+            <P>stream unlimeted movies and TV shows on your phone,tablet,laptop,and TV</P>
+        </div>
+        <div class="img-col">
+            <img src="images/feature-3.png" >
+        </div>
+    </div>
+    <div class="row">
+        <div class="img-col">
+            <img src="images/feature-4.png" >
+        </div>
+        <div class="txt-col">
+            <h2>Create profiles for children</h2>
+            <P>Send children on adventures with their favourite charecters in a space made just for them- free with your membership.</P>
+        </div>        
+    </div>
+</div>
+<div class="faq">
+    <h2>Frequently asked questions</h2>
+    <ul class="accordion">
+        <li>
+        <input type="radio" name="accordion" id="first">
+        <label for="first">what is Netflix?</label>
+        <div class="content">
+            <p>Netflix is a subscription-based streaming service that allows our members to watch TV shows and movies on an internet-connected device</p>
+        </div>
+    </li>
+    <li>
+        <input type="radio" name="accordion" id="second">
+        <label for="second">What is the price of Netflix subscription for 1 year?</label>
+        <div class="content">
+            <p> Rs 7,788/ year/Netflix Premium Plan.The end of top Netflix subscribe plan is called 'Premium', and it will set you back to cost of Rs 649 per month (Rs 7,788/ year).</p>
+        </div>
+    </li>
+    <li>
+        <input type="radio" name="accordion" id="third">
+        <label for="third">Can I share my Netflix account with family in a different home?</label>
+        <div class="content">
+            <p>Share Netflix with someone who doesn't live with you. People who are not in your household will need to sign up for their own account to watch; or in many countries you can buy an extra member slot to add an extra member to your account.</p>
+        </div>
+    </li>
+    <li>
+        <input type="radio" name="accordion" id="fourth">
+        <label for="fourth">How many devices are you allowed on Netflix?</label>
+        <div class="content">
+            <p>Both the Basic and Basic with ads plans allow you to watch Netflix on one screen only. With a Standard subscription, you can watch Netflix on two screens at the same time. Those with a Premium plan are able to watch Netflix on four screens at once.</p>
+        </div>
+    </li>
+    <li>
+        <input type="radio" name="accordion" id="fifth">
+        <label for="fifth">How does Netflix know my location?</label>
+        <div class="content">
+            <p>We use information such as IP addresses, device IDs, and account activity to determine whether a device signed into your account is part of your Netflix Household. We do not collect GPS data to try to determine the precise physical location of your devices.</p>
+        </div>
+    </li>
+    <li>
+        <input type="radio" name="accordion" id="sixth">
+        <label for="sixth">What is the difference between Netflix basic and premium?</label>
+        <div class="content">
+            <p>Standard allows two streams, and it downloads to two offline phones or tablets. Premium allows four streams, and it downloads to four offline phones or tablets. If you have a large household and want to keep the kiddies happy, Premium is probably the way to go.</p>
+        </div>
+    </li>
+</ul>
+<small>Ready to watch ? Enter your email to create or restart your membership</small>
+<form class="email-signup">
+    <input type="email" placeholder="email address"required>
+<button type="submit">Get started</button>
+</form>
+</div> 
+<div class="footer">
+    <h2>Questions? call 098-983-2823</h2>
+    <div class="row">
+        <div class="col">
+            <a href="#">FAQ</a>
+            <a href="#">Investor Relations</a>
+            <a href="#">Privacy</a>
+            <a href="#"> Speed Test</a>
+        </div>
+        <div class="col">
+            <a href="#">Help Center</a>
+            <a href="#">Jobs</a>
+            <a href="#">Cookies Preferences</a>
+            <a href="#">Legaal Notices </a>
+        </div>
+        <div class="col">
+            <a href="#">Account</a>
+            <a href="#">Ways to Watch</a>
+            <a href="#">Corparate Information</a>
+            <a href="#">Only on website</a>
+        </div>
+        <div class="col">
+            <a href="#">Media Center</a>
+            <a href="#">Terms of use</a>
+            <a href="#">Contact us</a>
+        </div>
+    </div>
+    <button class="language-btn">English <img src="images/down-icon.png"></button>
+    <p class="copyright-txt">Netflix India</p>
+</div>
 
-        var current_tasks = document.querySelectorAll(".delete");
-        for(var i=0; i<current_tasks.length; i++){
-            current_tasks[i].onclick = function(){
-                this.parentNode.remove();
-            }
-        }
-
-      
-
- 
-    }
-}
-    </script>   
+    
 </body>
 </html>
